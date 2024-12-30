@@ -43,7 +43,7 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
         System.out.println("Loaded user from Redis: " + userDTO);
         UserHolder.saveUser(userDTO);
 
-        stringRedisTemplate.expire(key, RedisConstants.LOGIN_USER_TTL, TimeUnit.MINUTES);
+        stringRedisTemplate.expire(key, RedisConstants.LOGIN_USER_TTL, TimeUnit.SECONDS);
         return true;
     }
 
