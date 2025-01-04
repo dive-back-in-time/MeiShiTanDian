@@ -22,8 +22,8 @@ public interface IVoucherOrderService extends IService<VoucherOrder> {
 
     /**
      * 基于悲观锁实现创建秒杀券功能
-     * @param voucherId
+     * @param
      * @return
      */
-    Result getVoucherResult(Long voucherId);
+    void getVoucherResult(VoucherOrder order);
 }
