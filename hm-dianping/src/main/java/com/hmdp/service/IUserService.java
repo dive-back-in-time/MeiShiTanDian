@@ -43,5 +43,15 @@ public interface IUserService extends IService<User> {
      */
     Result logout(HttpServletRequest request);
 
+    /**
+     * 用户签到
+     * @return
+     */
+    Result sign();
 
+    /**
+     * 存储本月到今天为止的连续签到天数
+     * @return
+     */
+    Result signCount();
 }
